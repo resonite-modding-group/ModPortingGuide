@@ -45,7 +45,19 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 
 | Neos                | Resonite         | Additional Notes        |
 | ------------------- | ------------------------ | ----------------------------------------------|
+| `Engine.Initialize` | `Engine.InitializeAssemblies` | This is where compatibility hash is computed |
+| `Engine.Shutdown`   | `Engine.RequestShutdown` |   |
 | `NeosMod`           | `ResoniteMod`            |   |
+| `NeosModBase`       | `ResoniteModBase`        |   |
 | `NeosModLoader`     | `ResoniteModLoader`      |   |
+| `SplashChanger`     |                          | Currently disabled, will need to be relooked at |
+| `[module: Description("POSTX_PROCESSED")]`     | `[module: Description("FROOXENGINE_WEAVED")]` | Plugins now are `Weaved` when loaded, this is done in `FrooxEngine.Weaver` |
 
 # API
+
+| Neos                | Resonite         | Additional Notes        |
+| ------------------- | ------------------------ | ----------------------------------------------|
+| `/api/sessions ` | `/sessions` | Active session listing |
+| `/api/users/ ` | `/users/` | Base user path, follow with a `U-ID` or a username followed by `?byUsername=true`|
+| `api.neos.com` | `api.resonite.com` | Base API url |
+| `assets.neos.com` | `assets.resonite.com` | Assets |
