@@ -34,8 +34,7 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 | `CommonTool`        | `InteractionHandler`     |   |
 | `ComponentAttacher` | `ComponentSelector`      |   |
 | `FriendsDialog`     | `ContactsDialog`         | Friends are now referred to as Contacts more universally |
-| `LogixBrowser`      | `ComponentSelector`      |   |
-| `LogixBrowser`      | `ComponentSelector`      |   |
+| `LogixBrowser`      | `ComponentSelector`      | `ComponentSelector` starting from a different root location for selecting nodes |
 | `StatusManager`     | `EngineStatusSource`     | Also inherits `IUserStatusSource` |
 | `Tooltips`          | `Tools`                  |   |
 
