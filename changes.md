@@ -17,6 +17,7 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 | `CodeX`             | `Elements.Assets`        |   |
 | `CommandX`          | `FrooxEngine.Commands`   |   |
 | `PostX`             | `FrooxEngine.Weaver`     |   |
+| `QuantiyX`          | `Elements.Quantity`      |   |
 
 ## Assets
 
