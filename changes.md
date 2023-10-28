@@ -27,10 +27,11 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 | `neosdb:///`        | `resdb:///`              | The assets need to exist in Resonite already. |
 | `neosrec:///`       | `resrec:///`             | The assets need to exist in Resonite already. |
 
-## Classes and Types
+## Classes, Types, and Components
 
 | Neos                | Resonite         | Additional Notes        |
 | ------------------- | ------------------------ | ----------------------------------------------|
+| `AudioPlayerOrb`    | `LegacyAudioPlayer`      | Use the `AudioPlayerInterface` that uses `EntityInterface` |
 | `color`             | `colorX`                 | Not everything will be `colorX`, they are two separate Types, however most usage will change to `colorX` |
 | `CommonTool`        | `InteractionHandler`     |   |
 | `ComponentAttacher` | `ComponentSelector`      |   |
@@ -38,10 +39,9 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 | `LogixBrowser`      | `ComponentSelector`      | `ComponentSelector` starting from a different root location for selecting nodes |
 | `StatusManager`     | `EngineStatusSource`     | Also inherits `IUserStatusSource` |
 | `Tooltips`          | `Tools`                  |   |
+| `VideoPlayer`       | `LegacyVideoPlayer`      | Use the `VideoPlayerInterface` that uses `EntityInterface` |
 
 # Modloader
-
-[NeosModLoader](https://github.com/neos-modding-group/NeosModLoader) change to [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader)
 
 | Neos                | Resonite         | Additional Notes        |
 | ------------------- | ------------------------ | ----------------------------------------------|
@@ -49,8 +49,8 @@ Updating a mod from Neos to Resonite? Here are some notable changes to assist in
 | `Engine.Shutdown`   | `Engine.RequestShutdown` |   |
 | `NeosMod`           | `ResoniteMod`            |   |
 | `NeosModBase`       | `ResoniteModBase`        |   |
-| `NeosModLoader`     | `ResoniteModLoader`      |   |
-| `SplashChanger`     |                          | Currently disabled, will need to be relooked at |
+| [NeosModLoader](https://github.com/neos-modding-group/NeosModLoader) | [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) |   |
+| `SplashChanger`     | `LoadProgressIndicator`  | Re-added as of 2.5.0 |
 | `[module: Description("POSTX_PROCESSED")]`     | `[module: Description("FROOXENGINE_WEAVED")]` | Plugins now are `Weaved` when loaded, this is done in `FrooxEngine.Weaver` |
 
 # API
